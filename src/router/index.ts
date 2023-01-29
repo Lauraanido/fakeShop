@@ -13,7 +13,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/about',
     name: 'about',
-    // beforeEnter: [haveRoleGuard],
+    beforeEnter: [haveRoleGuard],
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/detail',
     name: 'detail',
     
-    // beforeEnter: [haveRoleGuard],
+    beforeEnter: [haveRoleGuard],
     component: () => import(/* webpackChunkName: "detail" */ '../views/DetailView.vue'),
     
   }

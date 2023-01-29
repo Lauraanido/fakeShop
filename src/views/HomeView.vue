@@ -60,7 +60,7 @@ export default defineComponent({
       axios.post('https://api.escuelajs.co/api/v1/auth/login', newuser)
       .then( data => {
         if(data.data.status == "ok"){
-          console.log('Todo va bien')
+          localStorage.token = data.data.result.token;
         } else {
           this.error = true;
           this.error_msg = data.data.message;
