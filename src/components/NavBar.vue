@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="title">
-            <h4>Hola </h4>
+            <h4> Bienvenid@ a FakeShop</h4>
         </div>
 
     <div class="componente">
@@ -9,7 +9,7 @@
         <router-link :to="{name: 'about'}">Perfil</router-link> |
         <router-link :to="{name: 'detail'}"> Productos </router-link>
 
-        <button 
+        <button class="btn btn-light"
         v-for="link in links"
         :key="link.label"
         v-on:click="$emit('buttonClicked', link)">{{ link.label}}</button>
